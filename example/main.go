@@ -34,7 +34,7 @@ func main() {
 	// 	},
 	// })
 
-	transaction, err := mc.GetTransactionStatus("MNFY|93|20241111183527|000007")
+	transaction, err := mc.GetAllTransactions()
 
 	if err != nil {
 		log.Fatal(err)

@@ -10,6 +10,10 @@ type Customer struct {
 	Email string `json:"email"`
 }
 
+type Transactions struct {
+	Content []Transaction `json:"content"`
+}
+
 type Transaction struct {
 	TransactionReference string   `json:"transactionReference"`
 	PaymentReference     string   `json:"paymentReference"`
@@ -56,6 +60,19 @@ func (c *Client) InitializeTransaction(opts *InitializeTransactionOption) (*Init
 	}
 
 	return v, nil
+}
+
+// GetAllTransactions returns a list of transactions carried out on your integration.
+func (c *Client) GetAllTransactions() ([]Transaction, error) {
+	ts := new(Transactions)
+
+	_, err := c.doRequest(http.MethodGet, "/api/v1/transactions/search", nil, ts)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return ts.Content, nil
 }
 
 // GetTransactionStatus fetches the status of a transaction
