@@ -27,7 +27,6 @@ type Client struct {
 	client      *http.Client
 	baseURL     string
 	accessToken string
-	basicToken  string
 	apiKey      string
 	secretKey   string
 }

@@ -19,19 +19,19 @@ func main() {
 	}
 
 	// transaction, err := mc.InitializeTransaction(&monnify.InitializeTransactionOption{
-	// 	Amount:             300.50,
-	// 	CustomerName:       "Adedaramola Adetimehin",
-	// 	CustomerEmail:      "adedaramolaadetimehin@gmail.com",
-	// 	PaymentReference:   "skioenu3m3ovjo3v",
-	// 	PaymentDescription: "Subscription payment",
+	// Amount:             300.50,
+	// CustomerName:       "Adedaramola Adetimehin",
+	// CustomerEmail:      "adedaramolaadetimehin@gmail.com",
+	// PaymentReference:   "skioenu3m3ovjo3v",
+	// PaymentDescription: "Subscription payment",
 
-	// 	CurrencyCode:       "NGN",
-	// 	ContractCode:       "5460134745",
-	// 	RedirectURL:        "https://redirect.url",
-	// 	PaymentMethods: []string{
-	// 		"CARD",
-	// 		"ACCOUNT_TRANSFER",
-	// 	},
+	// CurrencyCode:       "NGN",
+	// ContractCode:       "5460134745",
+	// RedirectURL:        "https://redirect.url",
+	// PaymentMethods: []string{
+	// 	"CARD",
+	// 	"ACCOUNT_TRANSFER",
+	// },
 	// })
 
 	transaction, err := mc.GetAllTransactions()
